@@ -26,6 +26,25 @@ pipeline {
             }
         }
 
+        stage("deploy to test"){
+            when {
+                branch 'master'
+            }
+            steps{
+                echo "deploy to test"
+            }
+        }
+
+        stage("deploy to prod"){
+            when {
+                branch 'release'
+            }
+            steps{
+                echo "deploy to prod"
+            }
+        }
+
+
     }
     post {
         always{

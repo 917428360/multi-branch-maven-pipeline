@@ -52,7 +52,7 @@ pipeline {
                 echo "deploy to develop"
             }
         }
-        
+
     }
     post {
         always{

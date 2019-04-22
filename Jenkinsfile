@@ -44,6 +44,15 @@ pipeline {
             }
         }
 
+        stage("deploy to develop"){
+            when {
+                branch 'develop'
+            }
+            steps{
+                echo "deploy to develop"
+            }
+        }
+
 
     }
     post {
